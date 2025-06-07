@@ -9,18 +9,21 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: #f4f4f4;
+      background: #f9f9f9;
       color: #333;
     }
     header {
       background: #2c3e50;
       color: #fff;
-      padding: 2rem;
+      padding: 1rem;
       text-align: center;
     }
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
+    .profile-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-top: 1rem;
     }
     nav {
       background: #34495e;
@@ -29,32 +32,40 @@
     }
     nav a {
       color: white;
-      margin: 0 1rem;
+      margin: 0 0.5rem;
       text-decoration: none;
+      font-size: 0.9rem;
     }
     section {
-      padding: 2rem;
+      padding: 1rem;
       background: white;
-      margin: 1rem;
-      border-radius: 8px;
+      margin: 0.5rem;
+      border-radius: 6px;
     }
     h2 {
       color: #2c3e50;
+      margin-top: 0;
+    }
+    ul {
+      margin: 0.5rem 0;
+      padding-left: 1.2rem;
     }
     .contact a {
-      display: block;
+      display: inline-block;
+      margin-right: 1rem;
       color: #2980b9;
     }
     footer {
       text-align: center;
       padding: 1rem;
-      font-size: 0.9rem;
+      font-size: 0.8rem;
       color: #777;
     }
   </style>
 </head>
 <body>
   <header>
+    <img src="your-photo.jpg" alt="Saeed Rezaei Afshar" class="profile-img" />
     <h1>Saeed Rezaei Afshar</h1>
     <p>Researcher | Cognitive Science | Network Neuroscience</p>
     <p><a style="color:#1abc9c;" href="mailto:saeedrafsharx@gmail.com">saeedrafsharx@gmail.com</a> | Tehran, Iran</p>
@@ -98,9 +109,9 @@
   <section id="projects">
     <h2>Projects</h2>
     <ul>
-      <li><strong>Raspberry Pi Based Autism Assistance Tool (2023)</strong><br> Tools: Python, Office, EndNote</li>
-      <li><strong>Statistical Data Analysis in R (2023)</strong><br> Tools: R, Python</li>
-      <li><strong>Behavioral Cognitive Task Design (2023)</strong><br> Tools: Python, PsychoPy</li>
+      <li><strong>Autism Assistance Tool (2023)</strong> — Raspberry Pi, Python, EndNote</li>
+      <li><strong>Statistical Data Analysis (2023)</strong> — R, Python</li>
+      <li><strong>Cognitive Task Design (2023)</strong> — Python, PsychoPy</li>
     </ul>
   </section>
 
@@ -109,9 +120,9 @@
     <ul>
       <li>IELTS (8.0), Dec 2024</li>
       <li>fMRI with CONN Toolbox - CCNSD</li>
-      <li>Calculus & Statistics – Khan Academy</li>
-      <li>Advanced Python, Machine Learning – Maktabkhooneh</li>
-      <li>Philosophy of Cognitive Science – Coursera</li>
+      <li>Calculus & Stats – Khan Academy</li>
+      <li>Advanced Python, ML – Maktabkhooneh</li>
+      <li>Philosophy of CogSci – Coursera</li>
     </ul>
   </section>
 
@@ -127,7 +138,7 @@
   <section id="skills">
     <h2>Skills</h2>
     <p><strong>Languages:</strong> Python, R, LaTeX</p>
-    <p><strong>Applications:</strong> Ubuntu, VSCode, Office, Mendeley, CONN, SPM, FSL</p>
+    <p><strong>Tools:</strong> Ubuntu, VSCode, Office, Mendeley, CONN, SPM, FSL</p>
   </section>
 
   <section id="contact">
@@ -141,7 +152,7 @@
   </section>
 
   <footer>
-    &copy; 2025 Saeed Rezaei Afshar | Academic Website
+    &copy; 2025 Saeed Rezaei Afshar
   </footer>
 </body>
 </html>
