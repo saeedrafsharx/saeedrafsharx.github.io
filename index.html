@@ -6,63 +6,89 @@
   <title>Saeed Rezaei Afshar</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      background: #f0f8ff;
-      color: #333;
+      background: #ffffff;
+      color: #222;
     }
     header {
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-      color: #fff;
-      padding: 2rem 1rem 1rem 1rem;
+      background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+      color: #1b1b1b;
+      padding: 2rem 1rem;
       text-align: center;
     }
     .profile-img {
-      width: 140px;
-      height: 140px;
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
       object-fit: cover;
+      border: 3px solid #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
       margin-bottom: 1rem;
-      border: 4px solid #fff;
     }
     nav {
-      background: #264653;
+      background: #ffffff;
+      padding: 1rem 0;
       text-align: center;
-      padding: 0.5rem;
+      border-bottom: 1px solid #e0e0e0;
     }
     nav a {
-      color: #f4a261;
-      margin: 0 0.7rem;
+      color: #0077b6;
+      margin: 0 1rem;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #023e8a;
     }
     section {
       padding: 2rem 1rem;
-      max-width: 800px;
+      max-width: 700px;
       margin: auto;
     }
-    h1, h2 {
-      margin: 0.2rem 0;
+    h1 {
+      font-size: 2rem;
+      margin: 0.5rem 0;
+    }
+    h2 {
+      font-size: 1.4rem;
+      margin-top: 2rem;
+      color: #333;
     }
     .bio {
-      font-size: 1rem;
+      font-size: 1.1rem;
+      line-height: 1.6;
       margin-top: 1rem;
-      color: #333;
+      color: #444;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .contact {
+      text-align: center;
+      margin-top: 1.5rem;
     }
     .contact a {
       display: inline-block;
-      margin-right: 1rem;
-      margin-top: 0.5rem;
-      color: #1d3557;
+      margin: 0.5rem 1rem;
+      color: #0096c7;
+      font-weight: 500;
       text-decoration: none;
+      transition: color 0.3s;
+    }
+    .contact a:hover {
+      color: #023e8a;
     }
     footer {
       text-align: center;
       padding: 1rem;
-      background: #2c5364;
-      color: #fff;
-      font-size: 0.8rem;
+      background: #caf0f8;
+      color: #333;
+      font-size: 0.9rem;
+      margin-top: 3rem;
     }
   </style>
 </head>
@@ -71,12 +97,14 @@
     <img src="your-photo.jpg" alt="Saeed Rezaei Afshar" class="profile-img" />
     <h1>Saeed Rezaei Afshar</h1>
     <h2>Cognitive Science Researcher</h2>
-    <p class="bio">I’m currently pursuing a master's degree in Cognitive Science at Shahid Beheshti University, with a focus on network neuroscience. My interests include computational neuroscience, neuroimaging, and cognitive modeling. I also work as a researcher at the Center for Complex Networks & Social Data Science.</p>
+    <p class="bio">
+      I'm a master's student in Cognitive Science at Shahid Beheshti University. My work focuses on network neuroscience, computational neuroscience, neuroimaging, and cognitive modeling. Currently, I serve as a researcher at the Center for Complex Networks & Social Data Science.
+    </p>
   </header>
 
   <nav>
     <a href="#contact">Contact</a>
-    <a href="cv.html">CV</a>
+    <a href="cv.html">Curriculum Vitae</a>
   </nav>
 
   <section id="contact">
@@ -90,7 +118,7 @@
   </section>
 
   <footer>
-    &copy; 2025 Saeed Rezaei Afshar
+    &copy; 2025 Saeed Rezaei Afshar. All rights reserved.
   </footer>
 </body>
 </html>
