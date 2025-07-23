@@ -16,63 +16,68 @@
     header {
       background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
       color: #1b1b1b;
-      padding: 2rem 1rem;
+      padding: 3rem 1rem;
       text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
     .profile-img {
-      width: 250px;
-      height: 250px;
+      width: 200px;
+      height: 200px;
       border-radius: 50%;
       object-fit: cover;
-      border: 3px solid #fff;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-      margin-bottom: 1rem;
+      border: 4px solid #fff;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.4s ease;
+    }
+    .profile-img:hover {
+      transform: scale(1.08);
     }
     h1 {
-      font-size: 2rem;
-      margin: 0.5rem 0;
+      font-size: 2.2rem;
+      margin: 1rem 0 0.3rem;
     }
     h2 {
-      font-size: 1.4rem;
-      margin-top: 0.5rem;
-      color: #333;
+      font-size: 1.3rem;
+      margin: 0;
+      font-weight: 400;
     }
     .bio {
-      font-size: 1.1rem;
+      font-size: 1rem;
       line-height: 1.6;
-      margin-top: 1rem;
-      color: #444;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
+      margin: 1.5rem auto;
+      max-width: 600px;
+      color: #333;
     }
     .contact-bar {
       margin-top: 1.5rem;
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.8rem;
     }
     .contact-bar a {
-      display: inline-block;
-      margin: 0.4rem 0.6rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
       color: #d35400;
-      font-weight: bold;
-      font-size: 1.2rem;
+      font-weight: 500;
+      font-size: 1rem;
       text-decoration: none;
-      padding: 0.5rem 1rem;
-      border: 1px solid #d35400;
+      padding: 0.6rem 1.2rem;
+      border: 2px solid #d35400;
       border-radius: 30px;
-      background-color: #ffffff;
-      transition: background-color 0.3s, color 0.3s;
-    }
-    .contact-bar a i {
-      margin-right: 0.5rem;
+      background-color: #fff;
+      transition: background-color 0.3s, color 0.3s, transform 0.3s;
+      cursor: pointer;
     }
     .contact-bar a:hover {
       background-color: #d35400;
-      color: #ffffff;
+      color: #fff;
+      transform: translateY(-3px);
     }
     footer {
       text-align: center;
-      padding: 1rem;
+      padding: 1rem 0;
       background: #ffe5cc;
       color: #333;
       font-size: 0.9rem;
@@ -86,19 +91,18 @@
     <h1>Saeed Rezaei Afshar</h1>
     <h2>Cognitive Science Researcher</h2>
     <p class="bio">
-      I'm a master's student in Cognitive Science at Shahid Beheshti University. My work focuses on network neuroscience, computational neuroscience, neuroimaging, and cognitive modeling. Currently, I serve as a researcher at the Center for Complex Networks & Social Data Science.
+      I'm a master's student in Cognitive Science at Shahid Beheshti University. My work focuses on network neuroscience, computational neuroscience, neuroimaging, and cognitive modeling. Currently, I'm a researcher at the Center for Complex Networks & Social Data Science.
     </p>
     <div class="contact-bar">
-      <a href="https://saeedrafsharx.github.io"><i class="fas fa-globe"></i>Website</a>
-      <a href="https://linkedin.com/in/saeedrafshar"><i class="fab fa-linkedin"></i>LinkedIn</a>
-      <a href="https://github.com/saeedrafsharx"><i class="fab fa-github"></i>GitHub</a>
+      <a href="https://linkedin.com/in/saeedrafshar" target="_blank"><i class="fab fa-linkedin"></i>LinkedIn</a>
+      <a href="https://github.com/saeedrafsharx" target="_blank"><i class="fab fa-github"></i>GitHub</a>
       <a href="mailto:saeedrafsharx@gmail.com"><i class="fas fa-envelope"></i>Email</a>
-      <a href="cv.html"><i class="fas fa-file-alt"></i>Curriculum Vitae</a>
+      <a href="cv.html"><i class="fas fa-file-alt"></i>CV</a>
     </div>
   </header>
 
   <footer>
-    &copy; 2025 Saeed Rezaei Afshar. All rights reserved.
+    &copy; 2025 Saeed Rezaei Afshar
   </footer>
 </body>
 </html>
