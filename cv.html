@@ -3,158 +3,545 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Curriculum Vitae – Saeed Rezaei Afshar</title>
+  <title>CV - Saeid Rezaei Afshar</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary: #6366f1;
+      --primary-dark: #4f46e5;
+      --secondary: #8b5cf6;
+      --accent: #06b6d4;
+      --dark-bg: #0f172a;
+      --dark-card: #1e293b;
+      --dark-hover: #334155;
+      --text-primary: #f1f5f9;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       margin: 0;
       padding: 2rem 1rem;
-      background: #f7f9fb;
-      color: #222;
+      background: var(--dark-bg);
+      color: var(--text-primary);
+      line-height: 1.6;
     }
-    .container {
-      max-width: 850px;
-      margin: auto;
-      background: #fff;
-      padding: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+
+    /* Animated Background */
+    .bg-animation {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
     }
-    h1, h2, h3 {
-      color: #1d3557;
+
+    .bg-animation::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 20% 50%, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
+                  radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+      animation: pulse 20s ease-in-out infinite;
     }
-    h1 {
-      text-align: center;
-      margin-bottom: 0.5rem;
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.6; }
     }
-    .contact {
-      text-align: center;
+
+    /* Back Button */
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      background: rgba(99, 102, 241, 0.1);
+      border: 2px solid var(--primary);
+      border-radius: 50px;
+      color: var(--text-primary);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
       margin-bottom: 2rem;
     }
-    .contact a {
-      margin: 0 0.5rem;
-      color: #0077b6;
-      text-decoration: none;
+
+    .back-btn:hover {
+      background: var(--primary);
+      transform: translateX(-5px);
+      box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
     }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: var(--dark-card);
+      padding: 3rem;
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(99, 102, 241, 0.1);
+      position: relative;
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 50%, var(--accent) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: 800;
+    }
+
+    .contact {
+      text-align: center;
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid rgba(99, 102, 241, 0.2);
+    }
+
+    .contact a {
+      margin: 0 0.75rem;
+      color: var(--accent);
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
+
     .contact a:hover {
+      color: var(--primary);
       text-decoration: underline;
     }
+
+    h2 {
+      color: var(--text-primary);
+      font-size: 1.8rem;
+      margin-top: 2.5rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid var(--primary);
+      font-weight: 700;
+      position: relative;
+    }
+
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 60px;
+      height: 2px;
+      background: var(--accent);
+    }
+
+    h3 {
+      color: var(--text-secondary);
+      font-size: 1.2rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
     section {
       margin-bottom: 2rem;
     }
+
+    .education-item, .experience-item {
+      background: rgba(99, 102, 241, 0.05);
+      padding: 1.5rem;
+      border-radius: 12px;
+      margin-bottom: 1.5rem;
+      border-left: 4px solid var(--primary);
+      transition: all 0.3s ease;
+    }
+
+    .education-item:hover, .experience-item:hover {
+      background: rgba(99, 102, 241, 0.1);
+      transform: translateX(5px);
+    }
+
+    .education-item strong, .experience-item strong {
+      color: var(--text-primary);
+      font-size: 1.1rem;
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+
+    .education-item p, .experience-item p {
+      color: var(--text-muted);
+      margin: 0.25rem 0;
+    }
+
     ul {
-      padding-left: 1.2rem;
+      padding-left: 1.5rem;
+      margin-top: 0.75rem;
     }
+
+    ul li {
+      color: var(--text-secondary);
+      margin-bottom: 0.75rem;
+      position: relative;
+      padding-left: 0.5rem;
+    }
+
+    ul li::marker {
+      color: var(--primary);
+    }
+
+    ul li strong {
+      color: var(--text-primary);
+    }
+
     a {
-      color: #0077b6;
+      color: var(--accent);
       text-decoration: none;
+      transition: all 0.3s ease;
     }
+
     a:hover {
+      color: var(--primary);
       text-decoration: underline;
     }
+
+    .publication {
+      background: linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(139, 92, 246, 0.05));
+      padding: 1.5rem;
+      border-radius: 12px;
+      border: 1px solid rgba(99, 102, 241, 0.2);
+      margin-bottom: 1.5rem;
+    }
+
+    .publication em {
+      color: var(--accent);
+      font-weight: 600;
+      font-style: normal;
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      background: rgba(6, 182, 212, 0.15);
+      border-radius: 20px;
+      font-size: 0.85rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .publication strong {
+      color: var(--text-primary);
+      display: block;
+      margin: 0.75rem 0 0.5rem;
+      font-size: 1.05rem;
+      line-height: 1.5;
+    }
+
+    .publication .authors {
+      color: var(--text-secondary);
+      font-style: italic;
+    }
+
+    .skills-container {
+      background: rgba(99, 102, 241, 0.05);
+      padding: 1.5rem;
+      border-radius: 12px;
+      margin-top: 1rem;
+    }
+
+    .skills-container p {
+      margin-bottom: 0.75rem;
+      color: var(--text-secondary);
+    }
+
+    .skills-container strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    .reference-card {
+      background: rgba(99, 102, 241, 0.05);
+      padding: 1.5rem;
+      border-radius: 12px;
+      margin-bottom: 1.5rem;
+      border-left: 4px solid var(--accent);
+    }
+
+    .reference-card strong {
+      color: var(--text-primary);
+      font-size: 1.1rem;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .reference-card p {
+      color: var(--text-muted);
+      margin: 0.25rem 0;
+    }
+
     .footer {
       text-align: center;
       font-size: 0.9rem;
-      color: #777;
+      color: var(--text-muted);
       margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(99, 102, 241, 0.2);
+    }
+
+    .project-item {
+      background: rgba(99, 102, 241, 0.05);
+      padding: 1rem 1.5rem;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+      border-left: 4px solid var(--secondary);
+      transition: all 0.3s ease;
+    }
+
+    .project-item:hover {
+      background: rgba(99, 102, 241, 0.1);
+      transform: translateX(5px);
+    }
+
+    .cert-badge {
+      display: inline-block;
+      background: rgba(6, 182, 212, 0.15);
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      margin-bottom: 0.75rem;
+      margin-right: 0.5rem;
+      border: 1px solid rgba(6, 182, 212, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .cert-badge:hover {
+      background: rgba(6, 182, 212, 0.25);
+      transform: translateY(-2px);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      body {
+        padding: 1rem;
+      }
+
+      .container {
+        padding: 2rem 1.5rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      .contact a {
+        display: block;
+        margin: 0.5rem 0;
+      }
+    }
+
+    @media print {
+      body {
+        background: white;
+        color: black;
+      }
+
+      .bg-animation, .back-btn {
+        display: none;
+      }
+
+      .container {
+        box-shadow: none;
+        border: none;
+      }
     }
   </style>
 </head>
 <body>
+  <div class="bg-animation"></div>
+
+  <a href="index.html" class="back-btn">
+    <i class="fas fa-arrow-left"></i> Back to Home
+  </a>
+
   <div class="container">
-    <h1>Saeed Rezaei Afshar</h1>
+    <h1>Saeid Rezaei Afshar</h1>
     <div class="contact">
-      <a href="mailto:saeedrafsharx@gmail.com">saeedrafsharx@gmail.com</a> |
-      <a href="https://www.linkedin.com/in/saeedrafshar" target="_blank">LinkedIn</a> |
-      <a href="https://github.com/saeedrafsharx" target="_blank">GitHub</a> |
-      <a href="https://saeedrafsharx.github.io/" target="_blank">Website</a>
+      <a href="mailto:saeedrafsharx@gmail.com"><i class="fas fa-envelope"></i> saeedrafsharx@gmail.com</a>
+      <a href="https://www.linkedin.com/in/saeedrafshar" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="https://github.com/saeedrafsharx" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+      <a href="https://saeedrafsharx.github.io/" target="_blank"><i class="fas fa-globe"></i> Website</a>
     </div>
 
     <section>
-      <h2>Education</h2>
-      <p><strong>MSc. Cognitive Science</strong><br>
-      Shahid Beheshti University, ICBS, Tehran, Iran – GPA: 4.0/4.0<br>
-      Sept 2023 – Aug 2025<br>
-      Advisor: Dr. Reza Jafari</p>
-      <p><strong>BSc. Applied Linguistics (English)</strong><br>
-      Shahid Madani Azerbaijan University, Tabriz, Iran – GPA: 4.0/4.0<br>
-      Sept 2018 – Jul 2021</p>
+      <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+      <div class="education-item">
+        <strong>MSc. Cognitive Science</strong>
+        <p>Shahid Beheshti University, Institute for Cognitive and Brain Sciences (ICBS)</p>
+        <p>Tehran, Iran | GPA: 4.0/4.0</p>
+        <p>September 2023 – August 2025</p>
+        <p><em>Advisor: Dr. Reza Jafari</em></p>
+      </div>
+      <div class="education-item">
+        <strong>BSc. Applied Linguistics (English)</strong>
+        <p>Shahid Madani Azerbaijan University</p>
+        <p>Tabriz, Iran | GPA: 4.0/4.0</p>
+        <p>September 2018 – July 2021</p>
+      </div>
     </section>
 
     <section>
-      <h2>Research Interests</h2>
+      <h2><i class="fas fa-lightbulb"></i> Research Interests</h2>
       <ul>
         <li>Computational Neuroscience</li>
         <li>Cognitive Modeling</li>
-        <li>Neuroimaging</li>
+        <li>Neuroimaging (fMRI, EEG)</li>
         <li>Neurodevelopmental & Neurodegenerative Disorders</li>
         <li>Machine Learning & Biomarker Discovery</li>
+        <li>Network Neuroscience & Brain Connectivity</li>
       </ul>
     </section>
 
     <section>
-      <h2>Publications</h2>
-      <p><em>Under Review:</em><br>
-      <strong>Co-evolutionary Balance State of the Autism inter-Brain Network: A Neurofunctional Framework for Classification and Biomarker Discovery</strong><br>
-      Authors: Saeed Rezaei Afshar, Hamidreza Pouretemad, Reza Jafari</p>
+      <h2><i class="fas fa-file-alt"></i> Publications</h2>
+      <div class="publication">
+        <em>Under Review</em>
+        <strong>Co-evolutionary Balance State of the Autism inter-Brain Network: A Neurofunctional Framework for Classification and Biomarker Discovery</strong>
+        <p class="authors">Authors: Saeed Rezaei Afshar, Hamidreza Pouretemad, Reza Jafari</p>
+      </div>
     </section>
 
     <section>
-      <h2>Projects</h2>
-      <ul>
-        <li><strong>Autism Assistance Tool</strong> (2023) – Raspberry Pi, Python, Office, EndNote</li>
-        <li><strong>Statistical Data Analysis</strong> (2023) – R, Python</li>
-        <li><strong>Cognitive Task Design</strong> (2023) – Python, PsychoPy</li>
-      </ul>
+      <h2><i class="fas fa-project-diagram"></i> Projects</h2>
+      <div class="project-item">
+        <strong>Autism Assistance Tool</strong> (2023)<br>
+        Technologies: Raspberry Pi, Python, Office, EndNote
+      </div>
+      <div class="project-item">
+        <strong>Statistical Data Analysis</strong> (2023)<br>
+        Technologies: R, Python
+      </div>
+      <div class="project-item">
+        <strong>Cognitive Task Design</strong> (2023)<br>
+        Technologies: Python, PsychoPy
+      </div>
     </section>
 
     <section>
-      <h2>Certifications</h2>
-      <ul>
-        <li>Academic IELTS, Overall Band 8 – British Council, Dec 2024</li>
-        <li>Google Certified Professional Machine Learning Engineer</li>
-        <li>Python for Data Science</li>
-        <li>Processing fMRI Data Using CONN Toolbox – CCNSD, Shahid Beheshti University</li>
-        <li>Calculus, Statistics and Probability – Khan Academy</li>
-        <li>Introduction to Philosophy of Cognitive Sciences – Coursera, University of Edinburgh</li>
-        <li>Neurolinguistics – Saint Petersburg State University</li>
-      </ul>
+      <h2><i class="fas fa-certificate"></i> Certifications</h2>
+      <div style="margin-top: 1rem;">
+        <div class="cert-badge">
+          <i class="fas fa-award"></i> Academic IELTS, Overall Band 8 – British Council, Dec 2024
+        </div>
+        <div class="cert-badge">
+          <i class="fab fa-google"></i> Google Certified Professional Machine Learning Engineer
+        </div>
+        <div class="cert-badge">
+          <i class="fab fa-python"></i> Python for Data Science
+        </div>
+        <div class="cert-badge">
+          <i class="fas fa-brain"></i> Processing fMRI Data Using CONN Toolbox – CCNSD, Shahid Beheshti University
+        </div>
+        <div class="cert-badge">
+          <i class="fas fa-calculator"></i> Calculus, Statistics and Probability – Khan Academy
+        </div>
+        <div class="cert-badge">
+          <i class="fas fa-book"></i> Introduction to Philosophy of Cognitive Sciences – Coursera, University of Edinburgh
+        </div>
+        <div class="cert-badge">
+          <i class="fas fa-language"></i> Neurolinguistics – Saint Petersburg State University
+        </div>
+      </div>
     </section>
 
     <section>
-      <h2>Experience</h2>
-      <ul>
-        <li><strong>Researcher</strong> – CCNSD, Tehran (Sep 2024 – Present)</li>
-        <li><strong>Researcher</strong> – Computational Psychology Lab, ICBS (Sep 2023 – Mar 2024)</li>
-        <li><strong>Secretary</strong> – ICBS Scientific Association (Nov 2024 – Apr 2025)</li>
-        <li><strong>English Teacher</strong> – National Institute for ELT, Urmia, Iran (2019 – 2021)</li>
-      </ul>
+      <h2><i class="fas fa-briefcase"></i> Experience</h2>
+      <div class="experience-item">
+        <strong>Researcher</strong>
+        <p>Center for Complex Networks & Social Data Science (CCNSD), Tehran</p>
+        <p>September 2024 – Present</p>
+      </div>
+      <div class="experience-item">
+        <strong>Researcher</strong>
+        <p>Computational Psychology Lab, Institute for Cognitive and Brain Sciences</p>
+        <p>September 2023 – March 2024</p>
+      </div>
+      <div class="experience-item">
+        <strong>Secretary</strong>
+        <p>ICBS Scientific Association</p>
+        <p>November 2024 – April 2025</p>
+      </div>
+      <div class="experience-item">
+        <strong>English Teacher</strong>
+        <p>National Institute for English Language Teaching (NIELT), Urmia, Iran</p>
+        <p>2019 – 2021</p>
+      </div>
     </section>
 
     <section>
-      <h2>Skills</h2>
-      <p><strong>Languages:</strong> Python, R, LaTeX<br>
-      <strong>Tools:</strong> Ubuntu, VSCode, Microsoft Office, Mendeley, CONN, SPM, FSL</p>
+      <h2><i class="fas fa-code"></i> Technical Skills</h2>
+      <div class="skills-container">
+        <p><strong>Programming Languages:</strong> Python (NumPy, Pandas, Scikit-learn, NetworkX), R (ggplot2, dplyr, tidyverse), LaTeX</p>
+        <p><strong>Neuroimaging Tools:</strong> SPM, FSL, CONN Toolbox, PsychoPy</p>
+        <p><strong>Development Tools:</strong> Ubuntu/Linux, VSCode, Git, Jupyter Notebook</p>
+        <p><strong>Office & Research:</strong> Microsoft Office Suite, Mendeley, EndNote</p>
+      </div>
     </section>
 
     <section>
-      <h2>References</h2>
-      <ul>
-        <li><strong>Dr. Reza Jafari</strong><br>
-          Professor, Institute for Cognitive Science and Department of Physics, Shahid Beheshti University<br>
-          <a href="mailto:g_jafari@sbu.ac.ir">g_jafari@sbu.ac.ir</a> | <a href="mailto:gjafari@gmail.com">gjafari@gmail.com</a><br>
-          +98 21 2990 2773</li>
-        <li><strong>Dr. Reza KhosrowAbadi</strong><br>
-          Professor, Institute for Cognitive and Brain Sciences, Shahid Beheshti University<br>
-          <a href="mailto:r_khosroabadi@sbu.ac.ir">r_khosroabadi@sbu.ac.ir</a> | <a href="mailto:R.khosrowabadi@gmail.com">R.khosrowabadi@gmail.com</a></li>
-        <li><strong>S. Ali Hosseiny Esfidvajani</strong><br>
-          Assistant Professor, Faculty of Physics, Shahid Beheshti University<br>
-          <a href="mailto:al_hosseiny@sbu.ac.ir">al_hosseiny@sbu.ac.ir</a> | +98 21 2990 5043</li>
-      </ul>
+      <h2><i class="fas fa-users"></i> References</h2>
+      <div class="reference-card">
+        <strong>Dr. Reza Jafari</strong>
+        <p>Professor, Institute for Cognitive Science and Department of Physics</p>
+        <p>Shahid Beheshti University</p>
+        <p><a href="mailto:g_jafari@sbu.ac.ir">g_jafari@sbu.ac.ir</a> | <a href="mailto:gjafari@gmail.com">gjafari@gmail.com</a></p>
+        <p>Phone: +98 21 2990 2773</p>
+      </div>
+      <div class="reference-card">
+        <strong>Dr. Reza KhosrowAbadi</strong>
+        <p>Professor, Institute for Cognitive and Brain Sciences</p>
+        <p>Shahid Beheshti University</p>
+        <p><a href="mailto:r_khosroabadi@sbu.ac.ir">r_khosroabadi@sbu.ac.ir</a> | <a href="mailto:R.khosrowabadi@gmail.com">R.khosrowabadi@gmail.com</a></p>
+      </div>
+      <div class="reference-card">
+        <strong>S. Ali Hosseiny Esfidvajani</strong>
+        <p>Assistant Professor, Faculty of Physics</p>
+        <p>Shahid Beheshti University</p>
+        <p><a href="mailto:al_hosseiny@sbu.ac.ir">al_hosseiny@sbu.ac.ir</a></p>
+        <p>Phone: +98 21 2990 5043</p>
+      </div>
     </section>
 
     <div class="footer">
-      &copy; 2025 Saeed Rezaei Afshar
+      <p>&copy; 2025 Saeid Rezaei Afshar. All rights reserved.</p>
+      <p>Last updated: February 2025</p>
     </div>
   </div>
 </body>
