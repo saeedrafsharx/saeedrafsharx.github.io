@@ -6,82 +6,115 @@
   <title>Saeid Rezaei Afshar</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
   <style>
-    body {
-      font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    * {
       margin: 0;
       padding: 0;
-      background: #fff3e6;
-      color: #222;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f8f9fa;
+      color: #2c3e50;
+      line-height: 1.6;
     }
     header {
-      background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
-      color: #1b1b1b;
-      padding: 3rem 1rem;
+      background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+      color: #ffffff;
+      padding: 4rem 2rem;
       text-align: center;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
     .profile-img {
-      width: 200px;
-      height: 200px;
+      width: 180px;
+      height: 180px;
       border-radius: 50%;
       object-fit: cover;
-      border: 4px solid #fff;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      transition: transform 0.4s ease;
+      border: 5px solid rgba(255,255,255,0.9);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin-bottom: 1.5rem;
     }
     .profile-img:hover {
-      transform: scale(1.08);
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.3);
     }
     h1 {
-      font-size: 2.2rem;
-      margin: 1rem 0 0.3rem;
+      font-size: 2.5rem;
+      margin: 0.5rem 0;
+      font-weight: 700;
+      letter-spacing: -0.5px;
     }
     h2 {
       font-size: 1.3rem;
-      margin: 0;
+      margin: 0.5rem 0 1.5rem;
       font-weight: 400;
+      opacity: 0.95;
     }
     .bio {
-      font-size: 1rem;
-      line-height: 1.6;
+      font-size: 1.05rem;
+      line-height: 1.7;
       margin: 1.5rem auto;
-      max-width: 600px;
-      color: #333;
+      max-width: 700px;
+      color: rgba(255,255,255,0.95);
+      background: rgba(255,255,255,0.1);
+      padding: 1.5rem;
+      border-radius: 10px;
+      backdrop-filter: blur(10px);
     }
     .contact-bar {
-      margin-top: 1.5rem;
+      margin-top: 2rem;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 0.8rem;
+      gap: 1rem;
     }
     .contact-bar a {
       display: inline-flex;
       align-items: center;
-      gap: 0.4rem;
-      color: #d35400;
-      font-weight: 500;
-      font-size: 1rem;
+      gap: 0.5rem;
+      color: #1e3c72;
+      font-weight: 600;
+      font-size: 0.95rem;
       text-decoration: none;
-      padding: 0.6rem 1.2rem;
-      border: 2px solid #d35400;
-      border-radius: 30px;
-      background-color: #fff;
-      transition: background-color 0.3s, color 0.3s, transform 0.3s;
+      padding: 0.75rem 1.5rem;
+      border: 2px solid transparent;
+      border-radius: 50px;
+      background-color: #ffffff;
+      transition: all 0.3s ease;
       cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
     .contact-bar a:hover {
-      background-color: #d35400;
-      color: #fff;
-      transform: translateY(-3px);
+      background-color: #1e3c72;
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(30,60,114,0.3);
     }
     footer {
       text-align: center;
-      padding: 1rem 0;
-      background: #ffe5cc;
-      color: #333;
+      padding: 2rem 0;
+      background: #ffffff;
+      color: #6c757d;
       font-size: 0.9rem;
-      margin-top: 3rem;
+      margin-top: 0;
+      border-top: 1px solid #e9ecef;
+    }
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+      h2 {
+        font-size: 1.1rem;
+      }
+      .bio {
+        font-size: 1rem;
+        padding: 1rem;
+      }
+      header {
+        padding: 3rem 1.5rem;
+      }
     }
   </style>
 </head>
@@ -89,9 +122,9 @@
   <header>
     <img src="Selfie.jpg" alt="Saeid Rezaei Afshar" class="profile-img" />
     <h1>Saeid Rezaei Afshar</h1>
-    <h2>Neuroscience Researcher</h2>
+    <h2>Ph.D. Candidate in Neuroscience | Senior Python Developer & DevOps Engineer</h2>
     <p class="bio">
-      I’m a Master’s student in Cognitive Neuroscience Science at Shahid Beheshti University, specializing in computational and network neuroscience, neuroimaging, and cognitive modeling. As a researcher at the Center for Complex Networks & Social Data Science, I develop data‑driven tools for biomarker discovery in neurodevelopmental disorders. I’m proficient in Python, R, and advanced neuroimaging toolkits (SPM, FSL, CONN).
+      I'm a Ph.D. candidate in Neuroscience at Laval University, Canada, with a Master's degree in Cognitive Science (GPA: 4.0/4.0) from Shahid Beheshti University. My research focuses on computational neuroscience, dynamic network modeling of brain circuits, computational psychiatry, and machine learning for neural decoding. As a researcher at the Center for Complex Networks & Social Data Science, I develop data-driven tools for biomarker discovery in neurodevelopmental disorders. I combine expertise in neuroscience with professional software development, currently serving as Senior Python Developer & DevOps Engineer at Safron System Company.
     </p>
     <div class="contact-bar">
       <a href="https://linkedin.com/in/saeedrafshar" target="_blank"><i class="fab fa-linkedin"></i>LinkedIn</a>
@@ -102,7 +135,7 @@
   </header>
 
   <footer>
-    &copy; 2025 Saeid Rezaei Afshar
+    &copy; 2026 Saeid Rezaei Afshar
   </footer>
 </body>
 </html>
