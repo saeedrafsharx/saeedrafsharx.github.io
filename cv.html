@@ -3,159 +3,428 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Curriculum Vitae – Saeed Rezaei Afshar</title>
+  <title>Curriculum Vitae – Saeid Rezaei Afshar</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
   <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    * {
       margin: 0;
-      padding: 2rem 1rem;
-      background: #f7f9fb;
-      color: #222;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f8f9fa;
+      color: #2c3e50;
+      line-height: 1.6;
+    }
+    .header {
+      background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+      color: #ffffff;
+      padding: 3rem 2rem;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+    }
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-top: 1rem;
+      font-size: 0.95rem;
+    }
+    .contact-info a {
+      color: rgba(255,255,255,0.95);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: color 0.3s ease;
+    }
+    .contact-info a:hover {
+      color: #ffffff;
+      text-decoration: underline;
     }
     .container {
-      max-width: 850px;
-      margin: auto;
-      background: #fff;
-      padding: 2rem;
+      max-width: 900px;
+      margin: 2rem auto;
+      background: #ffffff;
+      padding: 2.5rem;
       border-radius: 8px;
-      box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
-    }
-    h1, h2, h3 {
-      color: #1d3557;
-    }
-    h1 {
-      text-align: center;
-      margin-bottom: 0.5rem;
-    }
-    .contact {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-    .contact a {
-      margin: 0 0.5rem;
-      color: #0077b6;
-      text-decoration: none;
-    }
-    .contact a:hover {
-      text-decoration: underline;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.08);
     }
     section {
-      margin-bottom: 2rem;
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      color: #1e3c72;
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 3px solid #2a5298;
+      font-weight: 700;
+    }
+    h3 {
+      color: #2c3e50;
+      font-size: 1.2rem;
+      margin-top: 1.2rem;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+    .degree-item {
+      margin-bottom: 1.5rem;
+      padding-left: 1rem;
+      border-left: 3px solid #e9ecef;
+    }
+    .degree-item strong {
+      color: #1e3c72;
+      font-size: 1.1rem;
+    }
+    .degree-details {
+      color: #6c757d;
+      font-size: 0.95rem;
+      margin-top: 0.3rem;
     }
     ul {
-      padding-left: 1.2rem;
+      padding-left: 1.5rem;
+      margin-top: 0.5rem;
     }
-    a {
-      color: #0077b6;
+    li {
+      margin-bottom: 0.6rem;
+      color: #495057;
+    }
+    .publication-item {
+      margin-bottom: 1.2rem;
+      padding: 1rem;
+      background: #f8f9fa;
+      border-radius: 6px;
+      border-left: 4px solid #2a5298;
+    }
+    .publication-item strong {
+      color: #1e3c72;
+    }
+    .publication-status {
+      display: inline-block;
+      padding: 0.2rem 0.6rem;
+      background: #ffc107;
+      color: #000;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-top: 0.3rem;
+    }
+    .experience-item {
+      margin-bottom: 1.5rem;
+      padding-left: 1rem;
+      border-left: 3px solid #e9ecef;
+    }
+    .experience-item strong {
+      color: #1e3c72;
+      font-size: 1.05rem;
+    }
+    .experience-date {
+      color: #6c757d;
+      font-size: 0.9rem;
+      font-style: italic;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .skill-category {
+      background: #f8f9fa;
+      padding: 1rem;
+      border-radius: 6px;
+      border-left: 4px solid #2a5298;
+    }
+    .skill-category h4 {
+      color: #1e3c72;
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+    }
+    .reference-item {
+      margin-bottom: 1.2rem;
+      padding: 1rem;
+      background: #f8f9fa;
+      border-radius: 6px;
+    }
+    .reference-item strong {
+      color: #1e3c72;
+      font-size: 1.05rem;
+    }
+    .reference-item a {
+      color: #2a5298;
       text-decoration: none;
     }
-    a:hover {
+    .reference-item a:hover {
       text-decoration: underline;
     }
-    .footer {
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      color: #2a5298;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    .back-link:hover {
+      color: #1e3c72;
+    }
+    footer {
       text-align: center;
+      padding: 2rem 0;
+      background: #ffffff;
+      color: #6c757d;
       font-size: 0.9rem;
-      color: #777;
-      margin-top: 3rem;
+      margin-top: 2rem;
+      border-top: 1px solid #e9ecef;
+    }
+    @media (max-width: 768px) {
+      .header h1 {
+        font-size: 2rem;
+      }
+      .container {
+        padding: 1.5rem;
+        margin: 1rem;
+      }
+      .contact-info {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      h2 {
+        font-size: 1.4rem;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Saeed Rezaei Afshar</h1>
-    <div class="contact">
-      <a href="mailto:saeedrafsharx@gmail.com">saeedrafsharx@gmail.com</a> |
-      <a href="https://www.linkedin.com/in/saeedrafshar" target="_blank">LinkedIn</a> |
-      <a href="https://github.com/saeedrafsharx" target="_blank">GitHub</a> |
-      <a href="https://saeedrafsharx.github.io/" target="_blank">Website</a>
+  <div class="header">
+    <h1>Saeid Rezaei Afshar</h1>
+    <div class="contact-info">
+      <a href="mailto:saeedrafsharx@gmail.com"><i class="fas fa-envelope"></i> saeedrafsharx@gmail.com</a>
+      <a href="https://linkedin.com/in/saeedrafshar" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="https://github.com/saeedrafsharx" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+      <a href="https://saeedrafsharx.github.io" target="_blank"><i class="fas fa-globe"></i> Personal Website</a>
     </div>
+  </div>
 
-    <section>
+  <div class="container">
+    <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Home</a>
+
+    <section id="education">
       <h2>Education</h2>
-      <p><strong>MSc. Cognitive Science</strong><br>
-      Shahid Beheshti University, ICBS, Tehran, Iran – GPA: 4.0/4.0<br>
-      Sept 2023 – Aug 2025<br>
-      Advisor: Dr. Reza Jafari</p>
-      <p><strong>BSc. Applied Linguistics (English)</strong><br>
-      Shahid Madani Azerbaijan University, Tabriz, Iran – GPA: 4.0/4.0<br>
-      Sept 2018 – Jul 2021</p>
+
+      <div class="degree-item">
+        <strong>Ph.D. Candidate in Neuroscience</strong>
+        <div class="degree-details">
+          Laval University, Quebec City, Canada<br>
+          Expected: May 2026 – November 2031
+        </div>
+      </div>
+
+      <div class="degree-item">
+        <strong>Master of Science in Cognitive Science</strong>
+        <div class="degree-details">
+          Shahid Beheshti University, ICBS, Tehran, Iran<br>
+          September 2023 – November 2025 | GPA: 4.0/4.0
+        </div>
+      </div>
+
+      <div class="degree-item">
+        <strong>Bachelor of Science in Applied Linguistics (English)</strong>
+        <div class="degree-details">
+          Shahid Madani Azerbaijan University (Tarbiat Moallem), Tabriz, Iran<br>
+          September 2018 – July 2021 | GPA: 4.0/4.0
+        </div>
+      </div>
     </section>
 
-    <section>
+    <section id="research-interests">
       <h2>Research Interests</h2>
       <ul>
         <li>Computational Neuroscience</li>
-        <li>Cognitive Modeling</li>
-        <li>Neuroimaging</li>
-        <li>Neurodevelopmental & Neurodegenerative Disorders</li>
-        <li>Machine Learning & Biomarker Discovery</li>
+        <li>Dynamic network modeling of brain circuits</li>
+        <li>Computational psychiatry</li>
+        <li>Machine learning for neural decoding</li>
       </ul>
     </section>
 
-    <section>
+    <section id="publications">
       <h2>Publications</h2>
-      <p><em>Under Review:</em><br>
-      <strong>Co-evolutionary Balance State of the Autism inter-Brain Network: A Neurofunctional Framework for Classification and Biomarker Discovery</strong><br>
-      Authors: Saeed Rezaei Afshar, Hamidreza Pouretemad, Reza Jafari</p>
+
+      <div class="publication-item">
+        <strong>Coevolutionary balance of resting-state brain networks in autism</strong><br>
+        <em>Rezaei Afshar, S., Jafari, R.</em><br>
+        Nature Scientific Reports<br>
+        Submission ID: 2f892ad7-f773-43c0-b239-7acd9469a8fc<br>
+        <span class="publication-status">Under Review</span>
+      </div>
+
+      <div class="publication-item">
+        <strong>Coupling Potential: Predicting Functional Connectivity from Structural Network Motifs</strong><br>
+        <em>Rezaei Afshar, S., Jafari, R.</em><br>
+        Network Neuroscience<br>
+        Submission ID: NETNEURO-26-0016<br>
+        <span class="publication-status">Under Review</span>
+      </div>
+
+      <div class="publication-item">
+        <strong>Survivorship Bias Masks True Network Aging: Longitudinal Evidence from Structural Connectome Analysis</strong><br>
+        <em>Rezaei Afshar, S., Jafari, R.</em><br>
+        <span class="publication-status" style="background: #17a2b8;">Under Preparation</span>
+      </div>
+
+      <div class="publication-item">
+        <strong>Persistent Homology Reveals Topological Alterations in Resting-State Brain Networks of Autism Spectrum Disorder</strong><br>
+        <em>M. Mozaffari, S. Roshandel, S. Rezaei Afshar, F. Farahpour, and G.R. Jafari</em><br>
+        <span class="publication-status" style="background: #17a2b8;">Under Preparation</span>
+      </div>
     </section>
 
-    <section>
+    <section id="projects">
       <h2>Projects</h2>
       <ul>
-        <li><strong>Autism Assistance Tool</strong> (2023) – Raspberry Pi, Python, Office, EndNote</li>
-        <li><strong>Statistical Data Analysis</strong> (2023) – R, Python</li>
-        <li><strong>Cognitive Task Design</strong> (2023) – Python, PsychoPy</li>
+        <li><strong>Designing a Raspberry Pi Based Assistance tool for Autism Diagnosed Children</strong> (2023)<br>
+        <em>Tools: Python, Office, EndNote</em></li>
+
+        <li><strong>Statistical Data Analysis Using R Language</strong> (2023)<br>
+        <em>Tools: R, Python</em></li>
+
+        <li><strong>Designing Behavioral Cognitive Tasks</strong> (2023)<br>
+        <em>Tools: Python, Psychopy</em></li>
       </ul>
     </section>
 
-    <section>
+    <section id="certifications">
       <h2>Certifications</h2>
       <ul>
-        <li>Academic IELTS, Overall Band 8 – British Council, Dec 2024</li>
-        <li>Google Certified Professional Machine Learning Engineer</li>
-        <li>Python for Data Science</li>
-        <li>Processing fMRI Data Using CONN Toolbox – CCNSD, Shahid Beheshti University</li>
-        <li>Calculus, Statistics and Probability – Khan Academy</li>
-        <li>Introduction to Philosophy of Cognitive Sciences – Coursera, University of Edinburgh</li>
-        <li>Neurolinguistics – Saint Petersburg State University</li>
+        <li><strong>Academic IELTS, Overall Band 8</strong> – British Council, December 2024</li>
+        <li><strong>Google Certified Professional Machine Learning Engineer</strong></li>
+        <li><strong>Python for Data Science</strong></li>
+        <li><strong>Processing fMRI Data Using CONN Toolbox</strong> – CCNSD, Shahid Beheshti University</li>
+        <li><strong>Calculus, Statistics and Probability</strong> – Khan Academy</li>
+        <li><strong>Introduction to Philosophy of Cognitive Sciences</strong> – Coursera, University of Edinburgh</li>
+        <li><strong>Neurolinguistics</strong> – Saint Petersburg State University</li>
       </ul>
     </section>
 
-    <section>
+    <section id="experience">
       <h2>Experience</h2>
-      <ul>
-        <li><strong>Researcher</strong> – CCNSD, Tehran (Sep 2024 – Present)</li>
-        <li><strong>Researcher</strong> – Computational Psychology Lab, ICBS (Sep 2023 – Mar 2024)</li>
-        <li><strong>Secretary</strong> – ICBS Scientific Association (Nov 2024 – Apr 2025)</li>
-        <li><strong>English Teacher</strong> – National Institute for ELT, Urmia, Iran (2019 – 2021)</li>
-      </ul>
+
+      <div class="experience-item">
+        <strong>Senior Python Developer & DevOps Engineer</strong><br>
+        Safron System Company, Tehran, Iran<br>
+        <span class="experience-date">November 2025 – Present</span>
+      </div>
+
+      <div class="experience-item">
+        <strong>Python Developer & DevOps Engineer</strong><br>
+        Baduno GmbH, Frankfurt, Germany (Remote)<br>
+        <span class="experience-date">July 2025 – November 2025</span>
+      </div>
+
+      <div class="experience-item">
+        <strong>Researcher</strong><br>
+        Center for Complex Networks & Social Data Science (CCNSD)<br>
+        <span class="experience-date">September 2024 – Present</span>
+      </div>
+
+      <div class="experience-item">
+        <strong>Secretary</strong><br>
+        Scientific Association, ICBS, Tehran, Iran<br>
+        <span class="experience-date">November 2024 – April 2025</span>
+      </div>
+
+      <div class="experience-item">
+        <strong>Intern Researcher</strong><br>
+        Computational Psychology Lab, ICBS, Tehran, Iran<br>
+        <span class="experience-date">September 2023 – March 2024</span>
+      </div>
+
+      <div class="experience-item">
+        <strong>English Language Teacher</strong><br>
+        National Institute for English Language Teaching, Urmia, Iran<br>
+        <span class="experience-date">September 2019 – September 2021</span>
+      </div>
+
+      <div class="experience-item">
+        <strong>Voluntary High School Biology Teacher to Financially Incapable Students</strong><br>
+        Shahindezh, West Azerbaijan, Iran<br>
+        <span class="experience-date">December 2021 – May 2022</span>
+      </div>
+
+      <div class="experience-item">
+        <strong>Voluntary English Language Teacher to Financially Incapable Students</strong><br>
+        Shahindezh, West Azerbaijan, Iran<br>
+        <span class="experience-date">July 2019 – November 2021</span>
+      </div>
     </section>
 
-    <section>
+    <section id="skills">
       <h2>Skills</h2>
-      <p><strong>Languages:</strong> Python, R, LaTeX<br>
-      <strong>Tools:</strong> Ubuntu, VSCode, Microsoft Office, Mendeley, CONN, SPM, FSL</p>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h4>Programming Languages</h4>
+          <ul style="margin: 0; padding-left: 1.2rem;">
+            <li>Python</li>
+            <li>R</li>
+            <li>Bash</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h4>Applications and Tools</h4>
+          <ul style="margin: 0; padding-left: 1.2rem;">
+            <li>Linux</li>
+            <li>Matlab</li>
+            <li>Microsoft Office</li>
+            <li>Mendeley</li>
+            <li>CONN</li>
+            <li>SPM</li>
+            <li>FSL</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
-    <section>
+    <section id="references">
       <h2>References</h2>
-      <ul>
-        <li><strong>Dr. Reza Jafari</strong><br>
-          Professor, Institute for Cognitive Science and Department of Physics, Shahid Beheshti University<br>
-          <a href="mailto:g_jafari@sbu.ac.ir">g_jafari@sbu.ac.ir</a> | <a href="mailto:gjafari@gmail.com">gjafari@gmail.com</a><br>
-          +98 21 2990 2773</li>
-        <li><strong>Dr. Reza KhosrowAbadi</strong><br>
-          Professor, Institute for Cognitive and Brain Sciences, Shahid Beheshti University<br>
-          <a href="mailto:r_khosroabadi@sbu.ac.ir">r_khosroabadi@sbu.ac.ir</a> | <a href="mailto:R.khosrowabadi@gmail.com">R.khosrowabadi@gmail.com</a></li>
-        <li><strong>S. Ali Hosseiny Esfidvajani</strong><br>
-          Assistant Professor, Faculty of Physics, Shahid Beheshti University<br>
-          <a href="mailto:al_hosseiny@sbu.ac.ir">al_hosseiny@sbu.ac.ir</a> | +98 21 2990 5043</li>
-      </ul>
-    </section>
 
-    <div class="footer">
-      &copy; 2025 Saeed Rezaei Afshar
-    </div>
+      <div class="reference-item">
+        <strong>Reza Jafari</strong><br>
+        Professor of Physics<br>
+        Department of Physics and Institute for Cognitive Science and Brain, Shahid Beheshti University, Tehran, Iran<br>
+        <i class="fas fa-phone"></i> (+98) 21 2990 2773<br>
+        <i class="fas fa-envelope"></i> <a href="mailto:g_jafari@sbu.ac.ir">g_jafari@sbu.ac.ir</a> | <a href="mailto:gjafari@gmail.com">gjafari@gmail.com</a><br>
+        <i class="fas fa-link"></i> <a href="#" target="_blank">HomePage</a>
+      </div>
+
+      <div class="reference-item">
+        <strong>Dr. Reza KhosrowAbadi</strong><br>
+        Professor<br>
+        Institute for Cognitive and Brain Sciences, Shahid Beheshti University, Tehran, Iran<br>
+        <i class="fas fa-envelope"></i> <a href="mailto:r_khosroabadi@sbu.ac.ir">r_khosroabadi@sbu.ac.ir</a> | <a href="mailto:R.khosrowabadi@gmail.com">R.khosrowabadi@gmail.com</a>
+      </div>
+
+      <div class="reference-item">
+        <strong>S. Ali Hosseiny Esfidvajani</strong><br>
+        Assistant Professor<br>
+        Faculty of Physics, Shahid Beheshti University, Tehran, Iran<br>
+        <i class="fas fa-phone"></i> (+98) 21 2990 5043<br>
+        <i class="fas fa-envelope"></i> <a href="mailto:al_hosseiny@sbu.ac.ir">al_hosseiny@sbu.ac.ir</a>
+      </div>
+    </section>
   </div>
+
+  <footer>
+    &copy; 2026 Saeid Rezaei Afshar
+  </footer>
 </body>
 </html>
