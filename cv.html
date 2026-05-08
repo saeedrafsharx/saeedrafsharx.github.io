@@ -39,7 +39,6 @@
       line-height: 1.6;
     }
 
-    /* Animated Background */
     .bg-animation {
       position: fixed;
       top: 0;
@@ -67,7 +66,6 @@
       50% { opacity: 0.6; }
     }
 
-    /* Back Button */
     .back-btn {
       display: inline-flex;
       align-items: center;
@@ -239,31 +237,43 @@
       padding: 1.5rem;
       border-radius: 12px;
       border: 1px solid rgba(99, 102, 241, 0.2);
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
     }
 
-    .publication em {
-      color: var(--accent);
-      font-weight: 600;
-      font-style: normal;
+    .publication .status {
       display: inline-block;
       padding: 0.25rem 0.75rem;
       background: rgba(6, 182, 212, 0.15);
+      border: 1px solid var(--accent);
       border-radius: 20px;
-      font-size: 0.85rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--accent);
       margin-bottom: 0.75rem;
     }
 
-    .publication strong {
+    .publication .status.preparation {
+      background: rgba(139, 92, 246, 0.15);
+      border-color: var(--secondary);
+      color: var(--secondary);
+    }
+
+    .publication .title {
       color: var(--text-primary);
-      display: block;
-      margin: 0.75rem 0 0.5rem;
-      font-size: 1.05rem;
-      line-height: 1.5;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      line-height: 1.4;
     }
 
     .publication .authors {
       color: var(--text-secondary);
+      font-size: 0.9rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .publication .venue {
+      color: var(--text-muted);
+      font-size: 0.85rem;
       font-style: italic;
     }
 
@@ -274,14 +284,32 @@
       margin-top: 1rem;
     }
 
-    .skills-container p {
+    .skills-container h3 {
+      color: var(--primary);
+      font-size: 1rem;
+      margin-top: 1rem;
       margin-bottom: 0.75rem;
-      color: var(--text-secondary);
     }
 
-    .skills-container strong {
+    .skills-container h3:first-child {
+      margin-top: 0;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .skill-tag {
+      padding: 0.4rem 0.9rem;
+      background: rgba(99, 102, 241, 0.15);
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      border-radius: 20px;
+      font-size: 0.85rem;
       color: var(--text-primary);
-      font-weight: 600;
+      font-weight: 500;
     }
 
     .reference-card {
@@ -343,7 +371,6 @@
       transform: translateY(-2px);
     }
 
-    /* Responsive */
     @media (max-width: 768px) {
       body {
         padding: 1rem;
@@ -403,15 +430,14 @@
     <section>
       <h2><i class="fas fa-graduation-cap"></i> Education</h2>
       <div class="education-item">
-        <strong>MSc. Cognitive Science</strong>
+        <strong>Master of Science in Cognitive Science</strong>
         <p>Shahid Beheshti University, Institute for Cognitive and Brain Sciences (ICBS)</p>
         <p>Tehran, Iran | GPA: 4.0/4.0</p>
-        <p>September 2023 – August 2025</p>
-        <p><em>Advisor: Dr. Reza Jafari</em></p>
+        <p>September 2023 – November 2025</p>
       </div>
       <div class="education-item">
-        <strong>BSc. Applied Linguistics (English)</strong>
-        <p>Shahid Madani Azerbaijan University</p>
+        <strong>Bachelor of Science in Applied Linguistics (English)</strong>
+        <p>Shahid Madani Azerbaijan University (Tarbiat Moallem)</p>
         <p>Tabriz, Iran | GPA: 4.0/4.0</p>
         <p>September 2018 – July 2021</p>
       </div>
@@ -421,36 +447,55 @@
       <h2><i class="fas fa-lightbulb"></i> Research Interests</h2>
       <ul>
         <li>Computational Neuroscience</li>
-        <li>Cognitive Modeling</li>
-        <li>Neuroimaging (fMRI, EEG)</li>
-        <li>Neurodevelopmental & Neurodegenerative Disorders</li>
-        <li>Machine Learning & Biomarker Discovery</li>
-        <li>Network Neuroscience & Brain Connectivity</li>
+        <li>Computational Psychiatry</li>
+        <li>Dynamic Network Modeling of Brain Circuits</li>
+        <li>Machine Learning for Neural Decoding</li>
       </ul>
     </section>
 
     <section>
       <h2><i class="fas fa-file-alt"></i> Publications</h2>
+
       <div class="publication">
-        <em>Under Review</em>
-        <strong>Co-evolutionary Balance State of the Autism inter-Brain Network: A Neurofunctional Framework for Classification and Biomarker Discovery</strong>
-        <p class="authors">Authors: Saeed Rezaei Afshar, Hamidreza Pouretemad, Reza Jafari</p>
+        <span class="status">Under Review</span>
+        <div class="title">Coevolutionary Balance of Resting-State Brain Networks in Autism</div>
+        <div class="authors">Rezaei Afshar, S., Jafari, R.</div>
+        <div class="venue">Nature Scientific Reports | Submission ID: 2f892ad7-f773-43c0-b239-7acd9469a8fc</div>
+      </div>
+
+      <div class="publication">
+        <span class="status">Under Review</span>
+        <div class="title">Coupling Potential: Predicting Functional Connectivity from Structural Network Motifs</div>
+        <div class="authors">Rezaei Afshar, S., Jafari, R.</div>
+        <div class="venue">Network Neuroscience | Submission ID: NETNEURO-26-0016</div>
+      </div>
+
+      <div class="publication">
+        <span class="status preparation">Under Preparation</span>
+        <div class="title">Survivorship Bias Masks True Network Aging: Longitudinal Evidence from Structural Connectome Analysis</div>
+        <div class="authors">Rezaei Afshar, S., Jafari, R.</div>
+      </div>
+
+      <div class="publication">
+        <span class="status preparation">Under Preparation</span>
+        <div class="title">Persistent Homology Reveals Topological Alterations in Resting-State Brain Networks of Autism Spectrum Disorder</div>
+        <div class="authors">M. Mozaffari, S. Roshandel, S. Rezaei Afshar, F. Farahpour, and G.R. Jafari</div>
       </div>
     </section>
 
     <section>
       <h2><i class="fas fa-project-diagram"></i> Projects</h2>
       <div class="project-item">
-        <strong>Autism Assistance Tool</strong> (2023)<br>
-        Technologies: Raspberry Pi, Python, Office, EndNote
+        <strong>Raspberry Pi Based Assistance Tool for Autism Diagnosed Children</strong> (2023)<br>
+        <em>Tools: Python, Office, EndNote</em>
       </div>
       <div class="project-item">
-        <strong>Statistical Data Analysis</strong> (2023)<br>
-        Technologies: R, Python
+        <strong>Statistical Data Analysis Using R Language</strong> (2023)<br>
+        <em>Tools: R, Python</em>
       </div>
       <div class="project-item">
-        <strong>Cognitive Task Design</strong> (2023)<br>
-        Technologies: Python, PsychoPy
+        <strong>Designing Behavioral Cognitive Tasks</strong> (2023)<br>
+        <em>Tools: Python, PsychoPy</em>
       </div>
     </section>
 
@@ -483,35 +528,76 @@
 
     <section>
       <h2><i class="fas fa-briefcase"></i> Experience</h2>
+
+      <div class="experience-item">
+        <strong>Senior Python Developer & DevOps Engineer</strong>
+        <p>Safron System Company, Tehran, Iran</p>
+        <p>November 2025 – Present</p>
+      </div>
+
+      <div class="experience-item">
+        <strong>Python Developer & DevOps Engineer</strong>
+        <p>Baduno GmbH, Frankfurt, Germany (Remote)</p>
+        <p>July 2025 – November 2025</p>
+      </div>
+
       <div class="experience-item">
         <strong>Researcher</strong>
-        <p>Center for Complex Networks & Social Data Science (CCNSD), Tehran</p>
+        <p>Center for Complex Networks & Social Data Science (CCNSD), Tehran, Iran</p>
         <p>September 2024 – Present</p>
       </div>
-      <div class="experience-item">
-        <strong>Researcher</strong>
-        <p>Computational Psychology Lab, Institute for Cognitive and Brain Sciences</p>
-        <p>September 2023 – March 2024</p>
-      </div>
+
       <div class="experience-item">
         <strong>Secretary</strong>
-        <p>ICBS Scientific Association</p>
+        <p>Scientific Association, ICBS, Tehran, Iran</p>
         <p>November 2024 – April 2025</p>
       </div>
+
       <div class="experience-item">
-        <strong>English Teacher</strong>
-        <p>National Institute for English Language Teaching (NIELT), Urmia, Iran</p>
-        <p>2019 – 2021</p>
+        <strong>Intern Researcher</strong>
+        <p>Computational Psychology Lab, ICBS, Tehran, Iran</p>
+        <p>September 2023 – March 2024</p>
+      </div>
+
+      <div class="experience-item">
+        <strong>English Language Teacher</strong>
+        <p>National Institute for English Language Teaching, Urmia, Iran</p>
+        <p>September 2019 – September 2021</p>
+      </div>
+
+      <div class="experience-item">
+        <strong>Voluntary High School Biology Teacher</strong>
+        <p>Teaching financially incapable students, Shahindezh, West Azerbaijan, Iran</p>
+        <p>December 2021 – May 2022</p>
+      </div>
+
+      <div class="experience-item">
+        <strong>Voluntary English Language Teacher</strong>
+        <p>Teaching financially incapable students, Shahindezh, West Azerbaijan, Iran</p>
+        <p>July 2019 – November 2021</p>
       </div>
     </section>
 
     <section>
       <h2><i class="fas fa-code"></i> Technical Skills</h2>
       <div class="skills-container">
-        <p><strong>Programming Languages:</strong> Python (NumPy, Pandas, Scikit-learn, NetworkX), R (ggplot2, dplyr, tidyverse), LaTeX</p>
-        <p><strong>Neuroimaging Tools:</strong> SPM, FSL, CONN Toolbox, PsychoPy</p>
-        <p><strong>Development Tools:</strong> Ubuntu/Linux, VSCode, Git, Jupyter Notebook</p>
-        <p><strong>Office & Research:</strong> Microsoft Office Suite, Mendeley, EndNote</p>
+        <h3>Programming Languages</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">Bash</span>
+          <span class="skill-tag">R</span>
+        </div>
+
+        <h3>Applications and Tools</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Linux</span>
+          <span class="skill-tag">Matlab</span>
+          <span class="skill-tag">Microsoft Office</span>
+          <span class="skill-tag">Mendeley</span>
+          <span class="skill-tag">CONN Toolbox</span>
+          <span class="skill-tag">SPM</span>
+          <span class="skill-tag">FSL</span>
+        </div>
       </div>
     </section>
 
@@ -519,21 +605,22 @@
       <h2><i class="fas fa-users"></i> References</h2>
       <div class="reference-card">
         <strong>Dr. Reza Jafari</strong>
-        <p>Professor, Institute for Cognitive Science and Department of Physics</p>
-        <p>Shahid Beheshti University</p>
+        <p>Professor of Physics, Department of Physics and Institute for Cognitive Science and Brain</p>
+        <p>Shahid Beheshti University, Tehran, Iran</p>
         <p><a href="mailto:g_jafari@sbu.ac.ir">g_jafari@sbu.ac.ir</a> | <a href="mailto:gjafari@gmail.com">gjafari@gmail.com</a></p>
         <p>Phone: +98 21 2990 2773</p>
+        <p><a href="#" target="_blank">Homepage</a></p>
       </div>
       <div class="reference-card">
         <strong>Dr. Reza KhosrowAbadi</strong>
         <p>Professor, Institute for Cognitive and Brain Sciences</p>
-        <p>Shahid Beheshti University</p>
+        <p>Shahid Beheshti University, Tehran, Iran</p>
         <p><a href="mailto:r_khosroabadi@sbu.ac.ir">r_khosroabadi@sbu.ac.ir</a> | <a href="mailto:R.khosrowabadi@gmail.com">R.khosrowabadi@gmail.com</a></p>
       </div>
       <div class="reference-card">
         <strong>S. Ali Hosseiny Esfidvajani</strong>
         <p>Assistant Professor, Faculty of Physics</p>
-        <p>Shahid Beheshti University</p>
+        <p>Shahid Beheshti University, Tehran, Iran</p>
         <p><a href="mailto:al_hosseiny@sbu.ac.ir">al_hosseiny@sbu.ac.ir</a></p>
         <p>Phone: +98 21 2990 5043</p>
       </div>
