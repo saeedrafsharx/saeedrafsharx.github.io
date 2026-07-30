@@ -2,8 +2,16 @@
   "channelTitle": "The Brain Terminal",
   "channelId": "UC_98EqzehlUBOwsggG1JkjA",
   "channelUrl": "https://www.youtube.com/@saeidrafshar",
-  "updated": "2026-07-30T09:29:03Z",
+  "updated": "2026-07-30T13:43:41Z",
   "videos": [
+    {
+      "id": "p68fenO7HnA",
+      "title": "Python for Neuroscience #5: NumPy and Your First Simulated Signal",
+      "url": "https://www.youtube.com/watch?v=p68fenO7HnA",
+      "thumbnail": "https://i.ytimg.com/vi/p68fenO7HnA/hqdefault.jpg",
+      "published": "2026-07-30T12:07:23+00:00",
+      "description": "Session 5 of a free 12-part course. NumPy, vectorisation, and the synthetic signal that carries us all the way through session 9. In 1924 Hans Berger recorded the first human EEG, partly because he was trying to find the"
+    },
     {
       "id": "r0kG0r46Vxg",
       "title": "Python for Neuroscience #4: Data Structures and Spike Rasters",
