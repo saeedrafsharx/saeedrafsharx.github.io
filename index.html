@@ -20,14 +20,19 @@
       --python-blue: #3776ab;
       --python-yellow: #ffd43b;
       --dark-bg: #0a0e27;
+      --youtube: #ff0033;
       --text-primary: #f1f5f9;
       --text-secondary: #cbd5e1;
       --text-muted: #94a3b8;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     html, body {
-      height: 100%;
-      overflow: hidden;
+      min-height: 100%;
+      overflow-x: hidden;
     }
 
     body {
@@ -51,7 +56,7 @@
     .container {
       position: relative;
       z-index: 1;
-      height: 100vh;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -216,6 +221,239 @@
       box-shadow: 0 10px 35px rgba(99, 102, 241, 0.5);
     }
 
+    .contact-bar a.yt-btn {
+      background: rgba(255, 0, 51, 0.15);
+      border-color: var(--youtube);
+    }
+
+    .contact-bar a.yt-btn:hover {
+      background: var(--youtube);
+      box-shadow: 0 10px 30px rgba(255, 0, 51, 0.4);
+    }
+
+    /* Scroll Cue */
+    .scroll-cue {
+      margin-top: 2.5rem;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      animation: fadeInUp 1.8s ease-out;
+      transition: color 0.3s ease;
+    }
+
+    .scroll-cue:hover {
+      color: var(--text-primary);
+    }
+
+    .scroll-cue i {
+      font-size: 1rem;
+      animation: bob 2s ease-in-out infinite;
+    }
+
+    @keyframes bob {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(6px); }
+    }
+
+    /* YouTube Section */
+    .yt-section {
+      position: relative;
+      z-index: 1;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 2rem 7rem;
+    }
+
+    .yt-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .yt-heading h2 {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: clamp(1.5rem, 3.5vw, 2.1rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .yt-heading h2 i {
+      color: var(--youtube);
+    }
+
+    .yt-heading p {
+      margin-top: 0.6rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      max-width: 520px;
+      line-height: 1.6;
+    }
+
+    .yt-subscribe {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.8rem 1.6rem;
+      background: var(--youtube);
+      border-radius: 50px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+      white-space: nowrap;
+      transition: all 0.3s ease;
+    }
+
+    .yt-subscribe:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(255, 0, 51, 0.45);
+    }
+
+    .yt-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .yt-card {
+      display: flex;
+      flex-direction: column;
+      background: rgba(15, 23, 42, 0.65);
+      border: 1px solid rgba(99, 102, 241, 0.25);
+      border-radius: 16px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      backdrop-filter: blur(10px);
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .yt-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(255, 0, 51, 0.55);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+    }
+
+    .yt-thumb {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      background: rgba(99, 102, 241, 0.08);
+      overflow: hidden;
+    }
+
+    .yt-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .yt-card:hover .yt-thumb img {
+      transform: scale(1.06);
+    }
+
+    .yt-play {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(10, 14, 39, 0.35);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .yt-card:hover .yt-play,
+    .yt-thumb.is-empty .yt-play {
+      opacity: 1;
+    }
+
+    .yt-play i {
+      font-size: 2.75rem;
+      color: var(--youtube);
+      filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.6));
+    }
+
+    .yt-body {
+      padding: 1.1rem 1.25rem 1.35rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      flex: 1;
+    }
+
+    .yt-body h3 {
+      font-size: 0.98rem;
+      font-weight: 600;
+      line-height: 1.45;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .yt-date {
+      margin-top: auto;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-family: 'Fira Code', monospace;
+    }
+
+    /* Loading + Fallback States */
+    .yt-skeleton {
+      border-radius: 16px;
+      border: 1px solid rgba(99, 102, 241, 0.15);
+      background: rgba(15, 23, 42, 0.5);
+      height: 260px;
+      animation: pulse 1.6s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.4; }
+      50% { opacity: 0.8; }
+    }
+
+    .yt-fallback {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 2.5rem 1.5rem;
+      border: 1px dashed rgba(99, 102, 241, 0.35);
+      border-radius: 16px;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+
+    .yt-fallback a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .yt-fallback a:hover {
+      text-decoration: underline;
+    }
+
+    .yt-updated {
+      margin-top: 1.75rem;
+      text-align: center;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      opacity: 0.75;
+    }
+
     /* Code Snippet Floating */
     .code-snippet {
       position: fixed;
@@ -366,6 +604,31 @@
         right: 1rem;
         max-width: 250px;
       }
+
+      .yt-section {
+        padding: 3rem 1.5rem 6rem;
+      }
+
+      .yt-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .yt-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      html {
+        scroll-behavior: auto;
+      }
     }
   </style>
 </head>
@@ -426,11 +689,42 @@
       <a href="mailto:saeedrafsharx@gmail.com">
         <i class="fas fa-envelope"></i> Email
       </a>
+      <a href="https://www.youtube.com/@saeidrafshar" target="_blank" rel="noopener" class="yt-btn">
+        <i class="fab fa-youtube"></i> YouTube
+      </a>
       <a href="cv.html" class="cv-btn">
         <i class="fas fa-file-alt"></i> Full CV
       </a>
     </div>
+
+    <a href="#youtube" class="scroll-cue">
+      Latest videos
+      <i class="fas fa-chevron-down"></i>
+    </a>
   </div>
+
+  <!-- YouTube Channel -->
+  <section class="yt-section" id="youtube">
+    <div class="yt-header">
+      <div class="yt-heading">
+        <h2><i class="fab fa-youtube"></i> <span id="ytChannelTitle">The Brain Terminal</span></h2>
+        <p>
+          Python, neuroscience and data analysis — new videos on the channel, listed here automatically as soon as they go live.
+        </p>
+      </div>
+      <a href="https://www.youtube.com/@saeidrafshar?sub_confirmation=1" target="_blank" rel="noopener" class="yt-subscribe">
+        <i class="fab fa-youtube"></i> Subscribe
+      </a>
+    </div>
+
+    <div class="yt-grid" id="ytGrid">
+      <div class="yt-skeleton"></div>
+      <div class="yt-skeleton"></div>
+      <div class="yt-skeleton"></div>
+    </div>
+
+    <p class="yt-updated" id="ytUpdated"></p>
+  </section>
 
   <!-- Info Badge -->
   <div class="info-badge" id="infoBadge">
@@ -622,6 +916,97 @@
         tooltip.classList.remove('show');
       }
     });
+
+    // Latest YouTube videos
+    // youtube.json is refreshed by .github/workflows/update-youtube.yml, which reads
+    // the channel's public RSS feed. Loading it from this origin avoids the CORS
+    // restrictions that block fetching the feed straight from the browser.
+    const CHANNEL_URL = 'https://www.youtube.com/@saeidrafshar';
+    const ytGrid = document.getElementById('ytGrid');
+    const ytUpdated = document.getElementById('ytUpdated');
+    const ytChannelTitle = document.getElementById('ytChannelTitle');
+
+    const formatDate = (value) => {
+      const date = new Date(value);
+      if (isNaN(date)) return '';
+      return date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+    };
+
+    const showFallback = () => {
+      ytGrid.innerHTML = `
+        <div class="yt-fallback">
+          The video list couldn't be loaded right now.<br />
+          <a href="${CHANNEL_URL}" target="_blank" rel="noopener">Watch the latest on YouTube &rarr;</a>
+        </div>`;
+      ytUpdated.textContent = '';
+    };
+
+    const renderVideos = (data) => {
+      const videos = Array.isArray(data.videos) ? data.videos : [];
+      if (!videos.length) {
+        showFallback();
+        return;
+      }
+
+      if (data.channelTitle) {
+        ytChannelTitle.textContent = data.channelTitle;
+      }
+
+      ytGrid.innerHTML = '';
+      videos.forEach((video) => {
+        const card = document.createElement('a');
+        card.className = 'yt-card';
+        card.href = video.url || `https://www.youtube.com/watch?v=${video.id}`;
+        card.target = '_blank';
+        card.rel = 'noopener';
+
+        const thumb = document.createElement('div');
+        thumb.className = 'yt-thumb';
+
+        const img = document.createElement('img');
+        img.src = video.thumbnail || `https://i.ytimg.com/vi/${video.id}/hqdefault.jpg`;
+        img.alt = video.title || 'YouTube video thumbnail';
+        img.loading = 'lazy';
+        // A missing thumbnail should leave a clean tile, not broken-image alt text.
+        img.addEventListener('error', () => {
+          img.remove();
+          thumb.classList.add('is-empty');
+        });
+        thumb.appendChild(img);
+
+        const play = document.createElement('div');
+        play.className = 'yt-play';
+        play.innerHTML = '<i class="fas fa-play-circle"></i>';
+        thumb.appendChild(play);
+
+        const body = document.createElement('div');
+        body.className = 'yt-body';
+
+        const title = document.createElement('h3');
+        title.textContent = video.title || 'Untitled video';
+        body.appendChild(title);
+
+        const date = document.createElement('span');
+        date.className = 'yt-date';
+        date.textContent = formatDate(video.published);
+        body.appendChild(date);
+
+        card.appendChild(thumb);
+        card.appendChild(body);
+        ytGrid.appendChild(card);
+      });
+
+      const updated = formatDate(data.updated);
+      ytUpdated.textContent = updated ? `Updated ${updated}` : '';
+    };
+
+    fetch('youtube.json', { cache: 'no-cache' })
+      .then((response) => {
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        return response.json();
+      })
+      .then(renderVideos)
+      .catch(showFallback);
   </script>
 </body>
 </html>
