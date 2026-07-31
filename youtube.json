@@ -2,8 +2,16 @@
   "channelTitle": "The Brain Terminal",
   "channelId": "UC_98EqzehlUBOwsggG1JkjA",
   "channelUrl": "https://www.youtube.com/@saeidrafshar",
-  "updated": "2026-07-31T13:48:36Z",
+  "updated": "2026-07-31T19:14:24Z",
   "videos": [
+    {
+      "id": "DbCYgPWw8UE",
+      "title": "Python for Neuroscience #6: pandas and Reaction Time Data",
+      "url": "https://www.youtube.com/watch?v=DbCYgPWw8UE",
+      "thumbnail": "https://i.ytimg.com/vi/DbCYgPWw8UE/hqdefault.jpg",
+      "published": "2026-07-31T17:22:16+00:00",
+      "description": "Session 6 of a free 12-part course. pandas, and the half of your data that is not a signal. In 1868 Franciscus Donders decided you could time a thought. Measure how long someone takes to react to a light. Then measure a "
+    },
     {
       "id": "p68fenO7HnA",
       "title": "Python for Neuroscience #5: NumPy and Your First Simulated Signal",
