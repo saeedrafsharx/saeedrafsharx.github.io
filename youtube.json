@@ -2,8 +2,16 @@
   "channelTitle": "The Brain Terminal",
   "channelId": "UC_98EqzehlUBOwsggG1JkjA",
   "channelUrl": "https://www.youtube.com/@saeidrafshar",
-  "updated": "2026-08-01T08:09:21Z",
+  "updated": "2026-08-01T13:03:52Z",
   "videos": [
+    {
+      "id": "a3dNow_hkXw",
+      "title": "Python for Neuroscience #1: Why Python and What This Course Builds",
+      "url": "https://www.youtube.com/watch?v=a3dNow_hkXw",
+      "thumbnail": "https://i.ytimg.com/vi/a3dNow_hkXw/hqdefault.jpg",
+      "published": "2026-08-01T11:22:04+00:00",
+      "description": "Session 1 of a free 12-part course. What neuroscience data actually is, why it needs code, and a real brain signal plotted in five lines before anything is explained. The signal in the opening is the medial default mode "
+    },
     {
       "id": "DbCYgPWw8UE",
       "title": "Python for Neuroscience #6: pandas and Reaction Time Data",
@@ -43,14 +51,6 @@
       "thumbnail": "https://i.ytimg.com/vi/K3fknG_5jPY/hqdefault.jpg",
       "published": "2026-07-27T18:16:01+00:00",
       "description": "Session 2 of a free 12-part course. Today you write your first Python: storing neuroscience data in variables, understanding types, and calculating a neuron's firing rate from a spike count. A Purkinje cell fires 50 to 1"
-    },
-    {
-      "id": "CmWhcrfktSE",
-      "title": "Python for Neuroscience #1: Your First Real Brain Signal in 5 Lines",
-      "url": "https://www.youtube.com/watch?v=CmWhcrfktSE",
-      "thumbnail": "https://i.ytimg.com/vi/CmWhcrfktSE/hqdefault.jpg",
-      "published": "2026-07-26T17:27:24+00:00",
-      "description": "Neuroscience data is spikes, EEG traces, fMRI time series and connectivity matrices. None of it fits in a spreadsheet. This is session 1 of a free 12-part course that takes you from your first variable to a real analysis"
     }
   ]
 }
