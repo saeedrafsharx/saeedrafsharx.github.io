@@ -2,8 +2,16 @@
   "channelTitle": "The Brain Terminal",
   "channelId": "UC_98EqzehlUBOwsggG1JkjA",
   "channelUrl": "https://www.youtube.com/@saeidrafshar",
-  "updated": "2026-08-01T13:03:52Z",
+  "updated": "2026-08-01T18:59:23Z",
   "videos": [
+    {
+      "id": "l2IObx2jkKc",
+      "title": "Python for Neuroscience #7: Matplotlib and Seaborn for Scientists",
+      "url": "https://www.youtube.com/watch?v=l2IObx2jkKc",
+      "thumbnail": "https://i.ytimg.com/vi/l2IObx2jkKc/hqdefault.jpg",
+      "published": "2026-08-01T13:38:30+00:00",
+      "description": "Session 7 of a free 12-part course. Plotting properly, because for most of your readers the figure is the paper. The most famous images in neuroscience were drawn by hand in ink. Cajal spent decades staining neurons and "
+    },
     {
       "id": "a3dNow_hkXw",
       "title": "Python for Neuroscience #1: Why Python and What This Course Builds",
@@ -43,14 +51,6 @@
       "thumbnail": "https://i.ytimg.com/vi/L0z1OBtBk5I/hqdefault.jpg",
       "published": "2026-07-28T15:25:29+00:00",
       "description": "Session 3 of a free 12-part course. Loops, conditionals and functions, which are the three things every analysis script is built from. A neuron sits near minus seventy millivolts, climbs when input arrives, and fires the"
-    },
-    {
-      "id": "K3fknG_5jPY",
-      "title": "Python for Neuroscience #2: Variables, Types and Firing Rates",
-      "url": "https://www.youtube.com/watch?v=K3fknG_5jPY",
-      "thumbnail": "https://i.ytimg.com/vi/K3fknG_5jPY/hqdefault.jpg",
-      "published": "2026-07-27T18:16:01+00:00",
-      "description": "Session 2 of a free 12-part course. Today you write your first Python: storing neuroscience data in variables, understanding types, and calculating a neuron's firing rate from a spike count. A Purkinje cell fires 50 to 1"
     }
   ]
 }
