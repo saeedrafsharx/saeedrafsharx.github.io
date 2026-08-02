@@ -2,8 +2,16 @@
   "channelTitle": "The Brain Terminal",
   "channelId": "UC_98EqzehlUBOwsggG1JkjA",
   "channelUrl": "https://www.youtube.com/@saeidrafshar",
-  "updated": "2026-08-02T13:06:06Z",
+  "updated": "2026-08-02T19:00:05Z",
   "videos": [
+    {
+      "id": "jyYLRMES7OE",
+      "title": "Python for Neuroscience #8: Signal Processing and Getting Alpha Back",
+      "url": "https://www.youtube.com/watch?v=jyYLRMES7OE",
+      "thumbnail": "https://i.ytimg.com/vi/jyYLRMES7OE/hqdefault.jpg",
+      "published": "2026-08-02T14:03:40+00:00",
+      "description": "Session 8 of a free 12-part course. Sampling rate, aliasing, and pulling an oscillation back out of noise. You have seen a car in a film where the wheels spin backwards. The wheel is fine. The camera is sampling too slow"
+    },
     {
       "id": "l2IObx2jkKc",
       "title": "Python for Neuroscience #7: Matplotlib and Seaborn for Scientists",
@@ -43,14 +51,6 @@
       "thumbnail": "https://i.ytimg.com/vi/r0kG0r46Vxg/hqdefault.jpg",
       "published": "2026-07-29T18:39:36+00:00",
       "description": "Session 4 of a free 12-part course. Lists, dictionaries and tuples, and how to hold a real recording in memory without ending up with forty loose variables you no longer trust. A neuron does one thing the rest of the bra"
-    },
-    {
-      "id": "L0z1OBtBk5I",
-      "title": "Python for Neuroscience #3: Control Flow and Functions",
-      "url": "https://www.youtube.com/watch?v=L0z1OBtBk5I",
-      "thumbnail": "https://i.ytimg.com/vi/L0z1OBtBk5I/hqdefault.jpg",
-      "published": "2026-07-28T15:25:29+00:00",
-      "description": "Session 3 of a free 12-part course. Loops, conditionals and functions, which are the three things every analysis script is built from. A neuron sits near minus seventy millivolts, climbs when input arrives, and fires the"
     }
   ]
 }
