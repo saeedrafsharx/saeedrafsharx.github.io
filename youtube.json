@@ -2,8 +2,16 @@
   "channelTitle": "The Brain Terminal",
   "channelId": "UC_98EqzehlUBOwsggG1JkjA",
   "channelUrl": "https://www.youtube.com/@saeidrafshar",
-  "updated": "2026-08-07T07:04:15Z",
+  "updated": "2026-08-07T12:46:35Z",
   "videos": [
+    {
+      "id": "APhvy1SA8hA",
+      "title": "Python for Neuroscience #10: Correlation Matrices, Graphs and Hubs",
+      "url": "https://www.youtube.com/watch?v=APhvy1SA8hA",
+      "thumbnail": "https://i.ytimg.com/vi/APhvy1SA8hA/hqdefault.jpg",
+      "published": "2026-08-07T12:04:13+00:00",
+      "description": "Session 10 of a free 12-part course. Turning a correlation matrix into a network you can measure. C. elegans has exactly 302 neurons. In the 1970s and 80s a team sliced one worm into thousands of ultra-thin sections, pho"
+    },
     {
       "id": "raCdtf70gfk",
       "title": "Python for Neuroscience #9: Statistics, Done Honestly",
@@ -43,14 +51,6 @@
       "thumbnail": "https://i.ytimg.com/vi/DbCYgPWw8UE/hqdefault.jpg",
       "published": "2026-07-31T17:22:16+00:00",
       "description": "Session 6 of a free 12-part course. pandas, and the half of your data that is not a signal. In 1868 Franciscus Donders decided you could time a thought. Measure how long someone takes to react to a light. Then measure a "
-    },
-    {
-      "id": "p68fenO7HnA",
-      "title": "Python for Neuroscience #5: NumPy and Your First Simulated Signal",
-      "url": "https://www.youtube.com/watch?v=p68fenO7HnA",
-      "thumbnail": "https://i.ytimg.com/vi/p68fenO7HnA/hqdefault.jpg",
-      "published": "2026-07-30T12:07:23+00:00",
-      "description": "Session 5 of a free 12-part course. NumPy, vectorisation, and the synthetic signal that carries us all the way through session 9. In 1924 Hans Berger recorded the first human EEG, partly because he was trying to find the"
     }
   ]
 }
