@@ -2,8 +2,16 @@
   "channelTitle": "The Brain Terminal",
   "channelId": "UC_98EqzehlUBOwsggG1JkjA",
   "channelUrl": "https://www.youtube.com/@saeidrafshar",
-  "updated": "2026-08-17T12:29:32Z",
+  "updated": "2026-08-17T18:28:43Z",
   "videos": [
+    {
+      "id": "uyOUdOWqrUs",
+      "title": "Python for Neuroscience #12: The Finale — 50 Brains, One Real Discovery",
+      "url": "https://www.youtube.com/watch?v=uyOUdOWqrUs",
+      "thumbnail": "https://i.ytimg.com/vi/uyOUdOWqrUs/hqdefault.jpg",
+      "published": "2026-08-17T14:23:05+00:00",
+      "description": "This is it. Session 12 of a free 12-part course, and everything from the previous eleven sessions gets pointed at a real question. In 2001 Marcus Raichle and colleagues described a set of brain regions that got MORE acti"
+    },
     {
       "id": "qY6tlDDw4Z4",
       "title": "Python for Neuroscience #11: Analysing Real fMRI Data with Nilearn",
@@ -43,14 +51,6 @@
       "thumbnail": "https://i.ytimg.com/vi/l2IObx2jkKc/hqdefault.jpg",
       "published": "2026-08-01T13:38:30+00:00",
       "description": "Session 7 of a free 12-part course. Plotting properly, because for most of your readers the figure is the paper. The most famous images in neuroscience were drawn by hand in ink. Cajal spent decades staining neurons and "
-    },
-    {
-      "id": "a3dNow_hkXw",
-      "title": "Python for Neuroscience #1: Why Python and What This Course Builds",
-      "url": "https://www.youtube.com/watch?v=a3dNow_hkXw",
-      "thumbnail": "https://i.ytimg.com/vi/a3dNow_hkXw/hqdefault.jpg",
-      "published": "2026-08-01T11:22:04+00:00",
-      "description": "Session 1 of a free 12-part course. What neuroscience data actually is, why it needs code, and a real brain signal plotted in five lines before anything is explained. The signal in the opening is the medial default mode "
     }
   ]
 }
