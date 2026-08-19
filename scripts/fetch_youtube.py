@@ -11,6 +11,7 @@ import json
 import os
 import re
 import sys
+import time
 import urllib.error
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -25,6 +26,11 @@ FEED_URL = "https://www.youtube.com/feeds/videos.xml?channel_id={}"
 CHANNEL_URL = "https://www.youtube.com/{}"
 USER_AGENT = "Mozilla/5.0 (compatible; saeedrafsharx.github.io site updater)"
 
+# YouTube occasionally answers a perfectly valid feed URL with a transient
+# 404/5xx. Retry a few times with a short backoff before giving up.
+RETRY_ATTEMPTS = 4
+RETRY_DELAY_SECONDS = 5
+
 NS = {
     "atom": "http://www.w3.org/2005/Atom",
     "yt": "http://www.youtube.com/xml/schemas/2015",
@@ -34,8 +40,18 @@ NS = {
 
 def get(url):
     request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
-    with urllib.request.urlopen(request, timeout=30) as response:
-        return response.read().decode("utf-8", "replace")
+    last_error = None
+    for attempt in range(1, RETRY_ATTEMPTS + 1):
+        try:
+            with urllib.request.urlopen(request, timeout=30) as response:
+                return response.read().decode("utf-8", "replace")
+        except (urllib.error.URLError, OSError) as error:
+            last_error = error
+            if attempt < RETRY_ATTEMPTS:
+                print("warning: fetch failed ({}), retrying in {}s ({}/{})".format(
+                    error, RETRY_DELAY_SECONDS, attempt, RETRY_ATTEMPTS))
+                time.sleep(RETRY_DELAY_SECONDS)
+    raise last_error
 
 
 def resolve_channel_id():
